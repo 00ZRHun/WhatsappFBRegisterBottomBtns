@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/brands.css">
+	
+	<style>
+		@media only screen and (max-width: 320px) {
+			/* .brNL {
+				width: 75px;
+				display: block;
+			} */
+			.xsBreakPoint {
+				float: right;
+			}
+		}
+
+		div.d-flex.flex-row.text-center {
+			font-size: large; 
+			background-color: red;
+		}
+		div.d-flex.flex-row.text-center>a {
+			text-decoration: none; 
+			color: black;
+			flex-grow: 3; 		
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- dummy-text-collections -->
+		<!-- <div class="dummy-text-collections">
+			<h1 class="mt-2">Dummy Text for Testing Purpose</h1><p class="dummyText"></p><p class="dummyText"></p>
+		</div> -->
+		<div class="dummy-text-collections"></div>
+		<!-- /dummy-text-collections -->
+
+		<!-- register -->
+		<div id="register">
+			<h3 class="mt-5 pt-5">Register here</h3>
+			<hr>
+			<p>After click the bottom button of <mark>"我要报名"</mark>, will jump to here</p>
+		</div>
+		<!-- /register -->
+
+		<!-- dummy-text-collections -->
+		<div class="dummy-text-collections"></div>
+		<!-- /dummy-text-collections -->
+	</div>
+	
+	<div class="my-5 py-5">
+	
+	<!-- <nav class="navbar fixed-bottom navbar-light bg-light">
+		<a class="navbar-brand" href="#">Fixed bottom</a>
+	</nav> -->
+	<div class="fixed-bottom">
+		<div class="row">
+		  <div class="col-sm text-center" style="background-color: black; color: white">
+			马上分享:
+		  </div>
+		</div>
+		<div class="d-flex flex-row text-center">
+			<!-- url NOT work -->
+			<!-- https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.ddonlineservices.com.br%2F%23dia-13&display=popup&ref=plugin; -->
+			<!-- url WORK -->
+			<!-- https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.ddonlineservices.com -->
+			<!-- https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ddonlineservices.com%2F -->
+			<a target="_blank" class="p-2" style="background-color: #4a66ad;" id="urlShareinFB"
+				href="">
+				<span class="fab fa-facebook-square"></span> &nbsp;
+				Facebook
+			</a>
+			<a href="https://wa.me/60187607079?text=I+want+to+register." target="_blank" class="p-2" style="background-color: #65d072;">
+				<span class="fab fa-whatsapp"></span> &nbsp;
+				Whatsapp
+			</a>
+			<a href="#register" class="p-2" style="background-color: #c92a60;">
+				<!-- <span class="brNL">我要</span><span class="brNL">报名</span> -->
+				我要<span class="xsBreakPoint">报名</span>
+			</a>
+		</div>
+	  </div>
+</body>
+
+<script>
+	// <---===Get Current Website URL=== //
+		// <---Get URL
+		var urlFB = 'https://www.facebook.com/sharer/sharer.php?u=' +
+		encodeURIComponent("https://www.ddonlineservices.com/");
+		//encodeURIComponent(window.location.href);
+		// Get URL-->
+		
+		// <---Add into Anchor
+		document.getElementById("urlShareinFB").href = urlFB;
+		//console.log(urlFB);
+		// Add into Anchor-->
+	// ===Get Current Website URL===--> //
+
+
+
+	// <---===Dummy Text=== //
+		// <---Collection
+		var dummyTextCollectionDivs = document.getElementsByClassName("dummy-text-collections")
+		for(let i=0; i<dummyTextCollectionDivs.length; i++) {
+			dummyTextCollectionDivs[i].innerHTML = '<h1 class="mt-2">Dummy Text for Testing Purpose</h1><p class="dummyText"></p><p class="dummyText"></p>';
+		}
+		// Collection-->
+		
+		// <---Single
+		var dummyTextDivs = document.getElementsByClassName("dummyText")
+		for(let i=0; i<dummyTextDivs.length; i++) {
+			dummyTextDivs[i].innerHTML = 
+				"<p>What is Lorem Ipsum?</p>" + 
+				"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><br>" + 
+		
+				"<p>Why do we use it?</p>" + 
+				"<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p><br>" + 
+		
+				"<p>Where does it come from?</p>" + 
+				"<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p><br>" + 
+		
+				"<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p><br>" + 
+		
+				"<p>Where can I get some?</p>" + 
+				"<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p><br><hr>"
+		}
+		// Single-->	
+	// ===Dummy Text===--> //
+</script>
+
+</html>
